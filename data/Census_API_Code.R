@@ -4,8 +4,6 @@
 # Adapted from: Michael Gropper
 # Date: 4/29/2020
 # Purpose: Pull ZCTA ACS data from API
-# Input Data: Census Bureau ACS API
-# Output Data: ACS_Tract_Level_Data_2010_2018.rds
 #
 ##########################################
 
@@ -128,6 +126,12 @@ census_data <- getCensus(name = "acs/acs5",
                            "B06009_006E",  # Graduate or professional
                            
                            "B01002_001E" #Median Age
+                           
+                           ### Gen's Code here ###
+                           
+                           
+                           ### Gabby's Code here ###
+                           
                   ),
                   region = "zip code tabulation area:*")
 
@@ -158,11 +162,18 @@ covid_census %>% ggplot() +
   xlab("Income") + 
   ylab("Cases") + 
   scale_x_log10() + 
-  scale_y_log10() + 
+  scale_y_log10() 
 
 #Cases vs Race (perc black) 
 plot(covid_census$B02001_003E / covid_census$B02001_001E, covid_census$Positive)
 plot(covid_census$B02001_003E / covid_census$B02001_001E, covid_census$zcta_cum.perc_pos)
+
+covid_census %>% ggplot() +
+  geom_point(aes(B02001_003E/B02001_001E, Positive)) +
+  xlab("Percent Black Population") + 
+  ylab("Cases") + 
+  scale_x_log10() + 
+  scale_y_log10()
 
 #Cases vs Education (perc grad)
 plot(covid_census$B06009_006E / covid_census$B06009_001E, covid_census$Positive)
@@ -200,6 +211,12 @@ census_data_clean <- census_data %>%
     "excludeme_pop_over_25_masters_above" = "B06009_006E",  # Graduate or professional
     
     "med_age" = "B01002_001E" #Median Age
+    
+    ### Gen's Code here ###
+    
+    
+    ### Gabby's Code here ###
+    
   ) %>%
   # Calculate some percentages
   mutate(pop_perc_white = excludeme_pop_white/pop_total,
@@ -213,6 +230,12 @@ census_data_clean <- census_data %>%
          pop_perc_some_college = excludeme_pop_over_25_some_college/excludeme_pop_over_25,
          pop_perc_bachelor = excludeme_pop_over_25_bachelors/excludeme_pop_over_25,
          pop_perc_masters_above = excludeme_pop_over_25_masters_above/excludeme_pop_over_25
+         
+         ### Gen's Code here ###
+         
+         
+         ### Gabby's Code here ###
+         
   ) %>%
   #Only include the cleaned up fields
   select(contains("_")) %>%
