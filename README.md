@@ -2,7 +2,7 @@
 
 ## Data Sources
 
-`coronavirus-data`: [NYC Health Coronavirus Data](https://github.com/nychealth/coronavirus-data)
+`coronavirus-data` and `zcta-data`: [NYC Health Coronavirus Data](https://github.com/nychealth/coronavirus-data)
 
 Census data extracted via API: `Census_API_Code.R`, and created the flat file `Census_Data_Cleaned.csv`.
 
