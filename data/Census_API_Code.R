@@ -1,7 +1,6 @@
 ##########################################
 # 
 # Author: Genevieve Lyons
-# Adapted from: Michael Gropper
 # Date: 4/29/2020
 # Purpose: Pull ZCTA ACS data from API
 #
@@ -312,14 +311,6 @@ census_data_clean <- census_data %>%
     
     "med_age" = "B01002_001E" #Median Age
     
-    ### Gen's Code here ###
-    
-    ## N/A - there were no fields that needed to be renamed but not manipulated
-    
-    ### Gabby's Code here ###
-    
-    ##Also NA.. I believe the next section of code covers all renaming/manipulation
-    
   ) %>%
   # Calculate some percentages
   mutate(pop_perc_white = excludeme_pop_white/pop_total,
@@ -334,7 +325,7 @@ census_data_clean <- census_data %>%
          pop_perc_bachelor = excludeme_pop_over_25_bachelors/excludeme_pop_over_25,
          pop_perc_masters_above = excludeme_pop_over_25_masters_above/excludeme_pop_over_25,
          
-         ### Gen's Code here ###
+         #Percentages
          perc_us_citizen = B05001_002E/B05001_001E,
          perc_transport_to_work_car = B08006_002E/B08006_001E,
          perc_transport_to_work_public = B08006_008E/B08006_001E,
@@ -380,8 +371,6 @@ census_data_clean <- census_data %>%
          avg_number_vehicles_count = B08015_001E/excludeme_pop_over_25,
          avg_income_deficit_pastyear = B17011_001E/excludeme_pop_over_25,
          
-         ### Gabby's Code here ###
-         
          #Type of Employment/income:
          perc_wage_salary = B19052_002E/B19052_001E,
          perc_selfemployed = B19053_002E/B19053_001E,
@@ -424,8 +413,6 @@ census_data_clean <- census_data %>%
          perc_otherservices = (C24040_027E+C24040_054E)/C24040_001E,
          perc_publicadministration = (C24040_028E+C24040_055E)/C24040_001E
          
-         
-         
   ) %>%
   #Only include the cleaned up fields
   select(contains("_")) %>%
@@ -436,8 +423,6 @@ census_data_clean <- census_data %>%
 
 
 View(census_data_clean)
-
-
 
 
 ##########################################
