@@ -274,7 +274,7 @@ census_data <- getCensus(name = "acs/acs5",
                            "C24040_048E", #Number of females in educational services, healthcare, and social assistance
                            "C24040_051E", #Number of females in arts, entertainment, recreation, and accomodation, and food services
                            "C24040_054E", #Number of females in other services, except public administration
-                           "C24040_055E", #Number of females in public administration
+                           "C24040_055E" #Number of females in public administration
                   ),
                   region = "zip code tabulation area:*")
 
