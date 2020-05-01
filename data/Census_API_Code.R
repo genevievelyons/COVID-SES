@@ -199,66 +199,82 @@ census_data <- getCensus(name = "acs/acs5",
                            "B17026_013E",
                            
                            ### Gabby's Code here ###
-                           "B19052_001E",
-                           "B19052_002E",
-                           "B19053_001E",
-                           "B19053_002E",
-                           "B19055_001E",
-                           "B19055_002E",
-                           "B19056_001E",
-                           "B19056_002E",
-                           "B19057_001E",
-                           "B19057_002E",
-                           "B19058_001E",
-                           "B19058_002E",
-                           "B19059_001E",
-                           "B19059_002E",
-                           "B23018_001E",
-                           "B25002_001E",
-                           "B25002_002E",
-                           "B25003_001E",
-                           "B25003_002E",
-                           "B25018_001E",
-                           "B25035_001E",
-                           "B25058_001E",
-                           "B25077_001E",
-                           "B25081_001E",
-                           "B25081_002E",
-                           "B25105_001E",
-                           "B99163_001E",
-                           "B99163_002E",
-                           "C24040_001E",
-                           "C24040_002E",
-                           "C24040_003E",
-                           "C24040_006E",
-                           "C24040_007E",
-                           "C24040_008E",
-                           "C24040_009E",
-                           "C24040_010E",
-                           "C24040_012E",
-                           "C24040_013E",
-                           "C24040_014E",
-                           "C24040_017E",
-                           "C24040_021E",
-                           "C24040_024E",
-                           "C24040_027E",
-                           "C24040_028E",
-                           "C24040_029E",
-                           "C24040_030E",
-                           "C24040_033E",
-                           "C24040_034E",
-                           "C24040_035E",
-                           "C24040_036E",
-                           "C24040_037E",
-                           "C24040_039E",
-                           "C24040_040E",
-                           "C24040_041E",
-                           "C24040_044E",
-                           "C24040_048E",
-                           "C24040_051E",
-                           "C24040_054E",
-                           "C24040_055E"
+                           "B19052_001E", #Denominator for wage or salary income
+                           "B19052_002E", #Number with wage or salary income
                            
+                           "B19053_001E", #Denominator for self employment income
+                           "B19053_002E", #Number with self employment income
+                           
+                           "B19055_001E", #Denominator for social security income
+                           "B19055_002E", #Number with social security income
+                           
+                           "B19056_001E", #Denominator for SSI income
+                           "B19056_002E", #Number with SSI income
+                           
+                           "B19057_001E", #Denominator for public assistance income
+                           "B19057_002E", #number with public assistance income
+                           
+                           "B19058_001E", #Denominator  for Cash public assiatance or Food stamps/SNAP
+                           "B19058_002E", #number with Cash public assiatance or Food stamps/SNAP
+                           
+                           "B19059_001E", #Denominator for retirement income
+                           "B19059_002E", #Number for retirement income
+                           
+                           "B23018_001E", #Aggregate usual hours worked in the past 12 months by sex (?*) for workers 16 to 64 years
+                           
+                           "B25002_001E", #Denomiator for occupancy status
+                           "B25002_002E", #Number for occupancy status
+                           
+                           "B25003_001E", #Denominator for owner occupied / tenure
+                           "B25003_002E", #Number for owner occupied / tenure
+                           
+                           "B25018_001E", #Median number of rooms
+                           
+                           "B25035_001E", #Median year structure built
+                           
+                           "B25058_001E", #Median contract rent
+                           
+                           "B25077_001E", #Median (house?) value in dollars
+                           
+                           "B25081_001E", #Denominator for housing units with mortgage
+                           "B25081_002E", #Number of housing unit with mortgage
+                           
+                           "B25105_001E", #Median monthly housing costs
+                           
+                           "B99163_001E", #Denominator for percentage speaking only english
+                           "B99163_002E", #number of people speaking only english
+                           
+                           "C24040_001E", #Total for sex by industry
+                           "C24040_002E", #Total males for sex by industry
+                           "C24040_003E", #Number of males in agriculture, forestry, fishing, hunting mining
+                           "C24040_006E", #Number of males in construction
+                           "C24040_007E", #Number of males in manufacturing
+                           "C24040_008E", #Number of males in wholesale trade
+                           "C24040_009E", #Number of males in retail trade
+                           "C24040_010E", #Number of males in transportation and warehousing and utilities
+                           "C24040_012E", #Number of males in transportation and warehousing and utilities --SUBSET utilities?
+                           "C24040_013E", #Number of males in information sciences
+                           "C24040_014E", #Number of males in finance and insurance, and real estate and rental and leasing
+                           "C24040_017E", #Number of males in Professional, scientific, and management, and administrative and waste management services
+                           "C24040_021E", #Number of males in educational services, healthcare, and social assistance
+                           "C24040_024E", #Number of males in arts, entertainment, recreation, and accomodation, and food services
+                           "C24040_027E", #Number of males in other services, except public administration
+                           "C24040_028E", #Number of males in public administration
+                           "C24040_029E", #Denominator for number of females
+                           "C24040_030E", #Number of females in agriculture, forestry, fishing, hunting mining
+                           "C24040_033E", #Number of females in construction
+                           "C24040_034E", #Number of females in manufacturing
+                           "C24040_035E", #Number of females in wholesale trade
+                           "C24040_036E", #Number of females in retail trade
+                           "C24040_037E", #Number of females in transportation and warehousing and utilities
+                           "C24040_039E", #Number of females in transportation and warehousing and utilities --SUBSET utilities?
+                           "C24040_040E", #Number of females in information sci.
+                           "C24040_041E", #Number of females in finance and insurance and real estate
+                           "C24040_044E", #Number of females in Professional, scientific, and management, and administrative and waste management services
+                           "C24040_048E", #Number of females in educational services, healthcare, and social assistance
+                           "C24040_051E", #Number of females in arts, entertainment, recreation, and accomodation, and food services
+                           "C24040_054E", #Number of females in other services, except public administration
+                           "C24040_055E", #Number of females in public administration
                   ),
                   region = "zip code tabulation area:*")
 
@@ -301,6 +317,8 @@ census_data_clean <- census_data %>%
     ## N/A - there were no fields that needed to be renamed but not manipulated
     
     ### Gabby's Code here ###
+    
+    ##Also NA.. I believe the next section of code covers all renaming/manipulation
     
   ) %>%
   # Calculate some percentages
@@ -360,9 +378,53 @@ census_data_clean <- census_data %>%
          #avg of aggregate measures 
          avg_travel_time_to_work_minutes = B08013_001E/excludeme_pop_over_25,
          avg_number_vehicles_count = B08015_001E/excludeme_pop_over_25,
-         avg_income_deficit_pastyear = B17011_001E/excludeme_pop_over_25
+         avg_income_deficit_pastyear = B17011_001E/excludeme_pop_over_25,
          
          ### Gabby's Code here ###
+         
+         #Type of Employment/income:
+         perc_wage_salary = B19052_002E/B19052_001E,
+         perc_selfemployed = B19053_002E/B19053_001E,
+         perc_socialsecurity_income = B19055_002E/B19055_001E,
+         perc_SSI = B19056_002E/B19056_001E,
+         perc_publicassist_income = B19057_002E/B19057_001E,
+         perc_foodstamps = B19058_002E/B19058_001E,
+         perc_retirement_income = B19059_002E/B19059_001E,
+         
+         #Average of aggregate measure
+         avg_hoursworked = B23018_001E/excludeme_pop_over_25,
+         
+         #Housing variables:
+         perc_occupancystatus = B25002_002E/B25002_001E,
+         perc_owneroccupied = B25003_002E/B25003_001E,
+         med_numberrooms = B25018_001E,
+         med_yearbuilt = B25035_001E,
+         med_contractrent = B25058_001E,
+         med_value = B25077_001E,
+         perc_withmortgage = B25081_002E/B25081_001E,
+         med_monthlyhousingcost = B25105_001E,
+         
+         #English Only Speaking:
+         perc_onlyenglish = B99163_002E/B99163_001E,
+         
+         #Percentages in cateogory of occupation:
+         #For these below, we take # of males in given occupation + # of females in given occupation and divide by total
+         perc_agriculture = (C24040_003E+C24040_030E)/C24040_001E,
+         perc_construction = (C24040_006E+C24040_033E)/C24040_001E,
+         perc_manufacturing= (C24040_007E+C24040_034E)/C24040_001E,
+         perc_wholesaletrade = (C24040_008E+C24040_035E)/C24040_001E,
+         perc_retailtrade = (C24040_009E+C24040_036E)/C24040_001E,
+         perc_transportation_warehousing = (C24040_010E+C24040_037E)/C24040_001E,
+         perc_utilites = (C24040_012E+C24040_039E)/C24040_001E,
+         perc_information= (C24040_013E+C24040_040E)/C24040_001E,
+         perc_finance = (C24040_014E+ C24040_041E)/C24040_001E,
+         perc_scientific = (C24040_017E + C24040_044E)/C24040_001E,
+         perc_education_healthcare = (C24040_021E+ C24040_048E)/C24040_001E,
+         perc_arts_entertainment = (C24040_024E+C24040_051E)/C24040_001E,
+         perc_otherservices = (C24040_027E+C24040_054E)/C24040_001E,
+         perc_publicadministration = (C24040_028E+C24040_055E)/C24040_001E
+         
+         
          
   ) %>%
   #Only include the cleaned up fields
