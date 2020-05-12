@@ -4,7 +4,7 @@
 
 ## Report and Results
 
-The full report, including analysis and conclusions, can be found in `SES-and-COVID-19.pdf`.
+The full report, including analysis and conclusions, can be found in `Socio-Economic Status and COVID-19 A New York City Case Study.pdf`.
 
 All supporting analysis and replicability information can be found in `Master-Analysis.ipynb`. For exploratory and data trending analysis, please see `EDA/ScatterAndLine.ipynb`. 
 
