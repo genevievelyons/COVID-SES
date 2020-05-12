@@ -2,7 +2,7 @@
 ## A Machine Learning Approach to Identify Communities At Risk
 ### Gabrielle LaRosa, Genevieve Lyons, Franklin Yang, Rebecca Youngerman
 
-### Report and Results
+## Report and Results
 
 The full report, including analysis and conclusions, can be found in `SES-and-COVID-19.pdf`.
 
