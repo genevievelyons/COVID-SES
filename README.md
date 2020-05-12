@@ -8,7 +8,9 @@ The full report, including analysis and conclusions, can be found in `SES-and-CO
 
 All supporting analysis and replicability information can be found in `Master-Analysis.ipynb`. For exploratory and data trending analysis, please see `EDA/ScatterAndLine.ipynb`. 
 
-Check out a gif of the NYC daily cases by zip code [HERE](https://github.com/genevievelyons/COVID-SES/blob/master/EDA/maps/new_map_normal_per10k.gif). 
+Check out a gif of the NYC daily cases by zip code [HERE](https://github.com/genevievelyons/COVID-SES/blob/master/EDA/maps/new_map_normal_small.gif). 
+
+![](https://github.com/genevievelyons/COVID-SES/blob/master/EDA/maps/new_map_normal_small.gif)
 
 ## Data Sources
 
